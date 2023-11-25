@@ -131,7 +131,17 @@
       // findEvenNums([0, 1, 2, 3, 4]) // should return [0, 2, 4]
       // ❗ Notes:
       // 🧠 Use any kind of loop you'd like and the push method to populate the array of even numbers.
-      function findEvenNums() {}
+      function findEvenNums(arr) {
+        let newArr = [];
+
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] % 2 === 0) {
+            newArr.push(arr[i]);
+          }
+        }
+
+        return newArr;
+      }
 
       // 👉 CHALLENGE 6
       // 🧠 The function separateAges takes an array of integers (ages) as its argument.
