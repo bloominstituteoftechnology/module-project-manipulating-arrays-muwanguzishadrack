@@ -187,7 +187,30 @@
       // nestedLoops(['hello', 'goodbye']) // should return ['hEllO', 'gOOdbyE']
       // ❗ Notes:
       // 🧠 To capitalize a string you can use its toUpperCase method: "a".toUpperCase() returns "A"
-      function nestedLoops() {}
+      function nestedLoops(strings) {
+        let result = [];
+
+        for (let i = 0; i < strings.length; i++) {
+          let newStr = "";
+          for (let j = 0; j < strings[i].length; j++) {
+            let char = strings[i][j];
+            if (
+              char === "a" ||
+              char === "e" ||
+              char === "i" ||
+              char === "o" ||
+              char === "u"
+            ) {
+              newStr += char.toUpperCase();
+            } else {
+              newStr += char;
+            }
+          }
+          result.push(newStr);
+        }
+
+        return result;
+      }
 
       // 👉 CHALLENGE 9
       // 🧠 The function crazyTrimmer takes an array as its argument.
@@ -199,7 +222,15 @@
       // ❗ Notes:
       // 🧠 Practice using pop and slice.
       // 🧠 Note that pop modifies the original array in place and returns the "popped" element, whereas slice gives us a brand new array.
-      function crazyTrimmer(arr) {}
+      function crazyTrimmer(arr) {
+        if (arr.length % 2 === 0) {
+          arr.pop();
+        } else {
+          arr = arr.slice(1, -1);
+        }
+
+        return arr;
+      }
 
       // 🧪 TESTS, do not work below this line
       // 🧪 TESTS, do not work below this line
