@@ -54,7 +54,24 @@
       // stripVowels('Lady Gaga') // should return 'Ldy Gg'
       // ❗ Notes:
       // 🧠 There are many ways to solve this, but practice using a for loop to iterate over the characters of the string.
-      function stripVowels(str) {}
+      function stripVowels(str) {
+        let stripStr = "";
+
+        for (let i = 0; i < str.length; i++) {
+          let char = str[i];
+          if (
+            char !== "a" &&
+            char !== "e" &&
+            char !== "i" &&
+            char !== "o" &&
+            char !== "u"
+          ) {
+            stripStr += char;
+          }
+        }
+
+        return stripStr;
+      }
 
       // 👉 CHALLENGE 3
       // 🧠 Reimplement sumNumsFor using a while loop instead of a for loop.
